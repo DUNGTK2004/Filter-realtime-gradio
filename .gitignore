@@ -1,4 +1,5 @@
 test
 filter/video
-filter/src/models/checkpoint
+filter/src/models/checkpoint/model.pth
+filter/src/models/checkpoint/model1_crop.pth
 YOLO_model/yolov11n-face.pt

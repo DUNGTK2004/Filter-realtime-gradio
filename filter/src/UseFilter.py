@@ -17,6 +17,16 @@ face_ronaldo = cv2.imread("filter/filter_images/ronaldo_filter.jpeg")
 height_test, width_test = face_ronaldo.shape[:2]
 points_ronaldo = predict_landmarks(face_ronaldo, 0, 0, width_test-1, height_test-1, model, transform)
 
+## Suzy 
+face_suzy = cv2.imread("filter/filter_images/suzy_filter.jpg")
+height_suzy, width_suzy = face_suzy.shape[:2]
+points_suzy = predict_landmarks(face_suzy, 0, 0, width_suzy-1, height_suzy-1, model, transform)
+
+## Suzy 
+face_faker = cv2.imread("filter/filter_images/faker_filter.jpg")
+height_faker, width_faker = face_faker.shape[:2]
+points_faker = predict_landmarks(face_faker, 0, 0, width_faker-1, height_faker-1, model, transform)
+
 # mask
 ## squid game
 mask_path_squid_game = "filter/filter_images/squid_game_front_man.png"
@@ -33,12 +43,16 @@ points_anonymous = get_points_of_mask( mask_csv_path_anonymous)
 
 filter_img = {
     "Face Ronaldo": face_ronaldo,
+    "Face Suzy": face_suzy,
+    "Face Faker": face_faker,
     "Mask Squid Game": mask_squid_game,
     "Mask Anonymous": mask_anonymous
 }
 
 filter_point = {
     "Face Ronaldo": points_ronaldo,
+    "Face Suzy": points_suzy,
+    "Face Faker": points_faker,
     "Mask Squid Game": points_squid_game,
     "Mask Anonymous": points_anonymous
 }

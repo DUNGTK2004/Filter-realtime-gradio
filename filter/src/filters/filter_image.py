@@ -76,7 +76,7 @@ def filter_on_image(img, face_swap, points2, filter_name, model, transform, face
                         img1_head_noface = cv2.bitwise_and(img_editable, img_editable, mask=img1_face_mask)
                         result = cv2.add(img1_head_noface, img_new_face)
 
-                        if filter_name == "Face Ronaldo":
+                        if "Face" in filter_name:
                             (x, y, w, h) = cv2.boundingRect(convexhull)
                             center_face1 = (int((2 * x + w)/2), int((2 * y + h) /2))
                             result = cv2.seamlessClone(result, img_editable, img1_head_mask, center_face1, cv2.MIXED_CLONE)

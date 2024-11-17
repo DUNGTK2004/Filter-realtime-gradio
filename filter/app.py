@@ -6,7 +6,7 @@ with gr.Blocks() as demo:
     with gr.Tab("Webcam Input"):
         with gr.Row():
             with gr.Column():
-                filter_name = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo", "Mask Squid Game", "Mask Anonymous", "landmarks"],
+                filter_name = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo",  "Face Suzy", "Face Faker", "Mask Squid Game", "Mask Anonymous", "landmarks"],
                                           value="no_mask", label="Filter")
                 input_img_webcam = gr.Image(sources=["webcam"], type="numpy")
             with gr.Column():
@@ -14,13 +14,13 @@ with gr.Blocks() as demo:
 
             # Processing webcam image
             input_img_webcam.stream(apply_filter_on_image, [input_img_webcam, filter_name], [output_img],
-                                    time_limit=30, stream_every=0.1, concurrency_limit=30)
+                                    time_limit=30, stream_every=0.7, concurrency_limit=2)
             
     # image
     with gr.Tab("Upload Image"):
         with gr.Row():
             with gr.Column():
-                filter_name_upload = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo", "Mask Squid Game", "Mask Anonymous","landmarks"],
+                filter_name_upload = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo", "Face Suzy", "Face Faker", "Mask Squid Game", "Mask Anonymous","landmarks"],
                                                  value="no_mask", label="Filter")
                 input_img_upload = gr.Image(type="numpy", label="Upload Image")
             with gr.Column():
@@ -33,7 +33,7 @@ with gr.Blocks() as demo:
     with gr.Tab("Upload video"):
         with gr.Row():
             with gr.Column():
-                filter_name_upload = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo", "Mask Squid Game", "Mask Anonymous", "landmarks"],
+                filter_name_upload = gr.Dropdown(choices=["cat_nose", "dog_nose", "cat_ears", "dog_ears", "no_mask", "Face Ronaldo",  "Face Suzy", "Face Faker", "Mask Squid Game", "Mask Anonymous", "landmarks"],
                                                  value="no_mask", label="Filter")
                 input_video_upload = gr.Video(label="Upload Video")
             with gr.Column():
