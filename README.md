@@ -15,9 +15,12 @@ conda activate myenv
 
 # install requirements
 pip install -r requirements.txt
+---
 
+### Pipeline
+1. Checkpoint for model landmark detection
+Download the checkpoints [model.pth](https://drive.google.com/file/d/1bBLc2_Wz0eb7Fbw9szEL5kr83TKWcQl1/view?usp=sharing) at here and place it at filter/src/models/checkpoint
 # run app
 python -m filter.app
-```
 
 Finally access the localhost link in the terminal to start the app
