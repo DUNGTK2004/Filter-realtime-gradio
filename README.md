@@ -41,4 +41,5 @@ docker pull dungtk04/filter-realtime-gradio
 ```bash
 docker run --network="host" dungtk04/filter-realtime-gradio
 ```
+Then access the localhost:7860
 
