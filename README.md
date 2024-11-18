@@ -7,7 +7,7 @@ git clone https://github.com/DUNGTK2004/Filter-realtime-gradio.git
 cd Filter-realtime-gradio
 
 # [OPTIONAL] create conda environment
-conda create -n myenv python=3.9
+conda create -n myenv python=3.12.7
 conda activate myenv
 
 # install pytorch according to instructions
