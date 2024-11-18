@@ -1,0 +1,3 @@
+test/
+YOLO_model/yolov11n-face.pt
+filter/src/models/checkpoint/model1_crop.pth
