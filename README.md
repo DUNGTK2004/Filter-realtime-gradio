@@ -15,7 +15,7 @@ conda activate myenv
 
 # install requirements
 pip install -r requirements.txt
----
+```
 
 ### Pipeline
 1. Checkpoint for model landmark detection
