@@ -18,7 +18,6 @@ conda activate myenv
 # install requirements
 pip install -r requirements.txt
 ```
-
 ### Pipeline
 <hr>
 
@@ -30,3 +29,16 @@ python -m filter.app
 ```
 
 Finally access the localhost:7860 link in the terminal to start the app
+
+### Docker 
+<hr>
+
+1. Pull docker image from dockerhub
+```bash
+docker pull dungtk04/filter-realtime-gradio
+```
+2. Run docker image
+```bash
+docker run --network="host" dungtk04/filter-realtime-gradio
+```
+
